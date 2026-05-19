@@ -1,0 +1,222 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>520 馃挃</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow:hidden;touch-action:manipulation;-webkit-overflow-scrolling:none}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;display:flex;justify-content:center;align-items:center;user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent}
+/* themes */
+body.th-dark{background:#0d0015}
+body.th-rose{background:#fef9f0}
+body.th-rain{background:#0a1628}
+body.th-glitch{background:#03080a;font-family:"Courier New","PingFang SC","Microsoft YaHei",monospace}
+body.th-fire{background:#1a0000}
+.bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0}
+.th-dark .bg{background:radial-gradient(ellipse 80% 60% at 30% 20%,rgba(255,105,180,.25),transparent 60%),radial-gradient(ellipse 60% 70% at 70% 60%,rgba(138,43,226,.2),transparent 60%),radial-gradient(ellipse 50% 50% at 50% 90%,rgba(255,62,94,.18),transparent 60%),linear-gradient(180deg,#1a0025 0%,#0d0015 40%,#120018 100%)}
+.th-rose .bg{background:radial-gradient(ellipse 70% 50% at 20% 30%,rgba(248,187,208,.35),transparent 55%),radial-gradient(ellipse 60% 60% at 75% 70%,rgba(255,205,210,.3),transparent 55%),radial-gradient(ellipse 50% 40% at 50% 15%,rgba(252,228,236,.4),transparent 50%),linear-gradient(180deg,#fef9f0 0%,#fce4ec 35%,#f8bbd0 100%)}
+.th-rain .bg{background:radial-gradient(ellipse 60% 50% at 25% 30%,rgba(100,180,220,.15),transparent 55%),radial-gradient(ellipse 50% 60% at 70% 65%,rgba(60,140,200,.12),transparent 55%),radial-gradient(ellipse 70% 40% at 50% 85%,rgba(30,80,160,.1),transparent 50%),linear-gradient(180deg,#0d1f35 0%,#0a1628 35%,#0c1a30 100%)}
+.th-glitch .bg{background:radial-gradient(ellipse 50% 40% at 30% 25%,rgba(0,255,100,.08),transparent 55%),radial-gradient(ellipse 45% 50% at 65% 60%,rgba(255,0,100,.07),transparent 55%),radial-gradient(ellipse 60% 30% at 50% 80%,rgba(0,200,255,.05),transparent 50%),linear-gradient(180deg,#020a0e 0%,#03080a 40%,#040c10 100%)}
+.th-fire .bg{background:radial-gradient(ellipse 70% 50% at 50% 110%,rgba(255,80,30,.35),transparent 50%),radial-gradient(ellipse 60% 40% at 30% 80%,rgba(255,140,20,.2),transparent 45%),radial-gradient(ellipse 50% 30% at 70% 90%,rgba(255,60,20,.18),transparent 45%),radial-gradient(ellipse 60% 50% at 50% 0%,rgba(200,30,10,.1),transparent 50%),linear-gradient(180deg,#1e0300 0%,#140200 30%,#1a0200 100%)}
+.parts{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.card-w{position:relative;z-index:10;width:88vw;max-width:380px}
+.card{position:relative;border-radius:22px;padding:30px 22px 20px;text-align:center;transition:transform .4s cubic-bezier(.34,1.56,.64,1),box-shadow .4s ease;animation:cardIn .8s cubic-bezier(.34,1.56,.64,1)}
+@keyframes cardIn{0%{transform:translateY(40px) scale(.9);opacity:0}100%{transform:translateY(0) scale(1);opacity:1}}
+.card.shake{animation:shake .5s ease}
+@keyframes shake{0%,100%{transform:translateX(0)}15%{transform:translateX(-6px)}30%{transform:translateX(6px)}45%{transform:translateX(-4px)}60%{transform:translateX(4px)}75%{transform:translateX(-2px)}}
+.th-dark .card{background:rgba(255,255,255,.06);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.12);color:#fff;box-shadow:0 8px 40px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.06)}
+.th-rose .card{background:linear-gradient(135deg,#fffdf7 0%,#fff9f0 40%,#fff5f5 100%);border:2px solid #e8b4b8;color:#5d3a3a;box-shadow:0 4px 30px rgba(180,100,110,.18),0 1px 0 rgba(255,255,255,.8) inset,0 8px 0 -3px #f0d0d5,0 8px 0 -1px #e8b4b8}
+.th-rain .card{background:rgba(20,45,70,.55);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(130,190,230,.15);color:#d0e4f5;box-shadow:0 8px 40px rgba(0,0,0,.45),inset 0 1px 0 rgba(180,210,240,.06),0 0 60px rgba(60,140,220,.06)}
+.th-glitch .card{background:rgba(5,15,20,.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(0,255,120,.2);color:#b8f0d0;box-shadow:0 4px 30px rgba(0,0,0,.6),inset 0 1px 0 rgba(0,255,120,.04)}
+.th-fire .card{background:linear-gradient(180deg,rgba(40,10,0,.75),rgba(30,5,0,.8));backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,100,30,.2);color:#f5d0b0;box-shadow:0 6px 36px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,140,80,.04),0 0 40px rgba(200,50,10,.08)}
+.icon{display:block;font-size:50px;line-height:1.2;transition:all .35s cubic-bezier(.34,1.56,.64,1)}
+.th-dark .icon{filter:drop-shadow(0 4px 20px rgba(255,80,120,.4));animation:heartBeat .9s ease-in-out infinite}
+@keyframes heartBeat{0%,100%{transform:scale(1)}14%{transform:scale(1.12)}28%{transform:scale(1)}42%{transform:scale(1.12)}56%{transform:scale(1)}}
+.th-rose .icon{filter:drop-shadow(0 4px 12px rgba(200,80,80,.3));animation:gentlePulse 1.2s ease-in-out infinite}
+@keyframes gentlePulse{0%,100%{transform:scale(1)}40%{transform:scale(1.08)}70%{transform:scale(1)}}
+.th-rain .icon{filter:drop-shadow(0 4px 16px rgba(140,200,240,.35));animation:floatMoon 1.6s ease-in-out infinite}
+@keyframes floatMoon{0%,100%{transform:translateY(0) scale(1)}35%{transform:translateY(-6px) scale(1.06)}70%{transform:translateY(0) scale(1)}}
+.th-glitch .icon{filter:drop-shadow(0 0 16px rgba(0,255,120,.4));animation:flickerIcon 2s ease-in-out infinite}
+@keyframes flickerIcon{0%,100%{opacity:1;filter:drop-shadow(0 0 16px rgba(0,255,120,.4))}25%{opacity:.75;filter:drop-shadow(0 0 16px rgba(255,0,150,.4))}50%{opacity:1;filter:drop-shadow(0 0 20px rgba(0,200,255,.5))}75%{opacity:.8;filter:drop-shadow(0 0 16px rgba(0,255,120,.3))}}
+.th-fire .icon{filter:drop-shadow(0 4px 20px rgba(255,100,20,.5));animation:flameFlicker 1s ease-in-out infinite}
+@keyframes flameFlicker{0%,100%{transform:scaleY(1) scaleX(1);filter:drop-shadow(0 4px 20px rgba(255,100,20,.5))}30%{transform:scaleY(1.1) scaleX(.95);filter:drop-shadow(0 6px 24px rgba(255,120,30,.6))}60%{transform:scaleY(.9) scaleX(1.05);filter:drop-shadow(0 3px 16px rgba(255,80,10,.4))}}
+.nametag{display:inline-block;border-radius:12px;padding:6px 18px;font-size:17px;font-weight:700;letter-spacing:2px;margin:8px 0 4px}
+.th-dark .nametag{background:linear-gradient(135deg,rgba(255,105,180,.25),rgba(138,43,226,.2));border:1px solid rgba(255,255,255,.15);text-shadow:0 0 20px rgba(255,105,180,.5)}
+.th-rose .nametag{background:linear-gradient(135deg,#f8bbd0,#f48fb1);color:#fff;border-radius:4px 16px 4px 16px;box-shadow:0 2px 8px rgba(200,80,100,.25);text-shadow:0 1px 2px rgba(150,40,60,.2)}
+.th-rain .nametag{background:rgba(100,180,230,.12);border:1px solid rgba(130,200,240,.25);border-radius:6px 18px 6px 18px;color:#c8e2f8;text-shadow:0 0 12px rgba(140,200,240,.5);box-shadow:0 0 16px rgba(80,160,220,.15),inset 0 1px 0 rgba(180,220,255,.08)}
+.th-glitch .nametag{background:rgba(0,255,100,.08);border:1px solid rgba(0,255,120,.3);color:#90f0b8;text-shadow:0 0 10px rgba(0,255,120,.5),0 0 30px rgba(0,255,120,.2);box-shadow:0 0 12px rgba(0,255,100,.1)}
+.th-fire .nametag{background:linear-gradient(180deg,rgba(255,80,20,.2),rgba(200,40,5,.15));border:1px solid rgba(255,120,40,.3);border-radius:3px 14px 3px 14px;color:#f5c090;text-shadow:0 0 10px rgba(255,100,30,.4);box-shadow:0 0 16px rgba(255,60,10,.12)}
+.pill{display:inline-block;border-radius:16px;padding:4px 14px;font-size:11px;margin-bottom:8px;letter-spacing:1px}
+.th-dark .pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.6)}
+.th-rose .pill{background:rgba(180,100,120,.08);border:1px solid rgba(180,100,120,.2);color:#9b6b6b}
+.th-rain .pill{background:rgba(100,160,220,.08);border:1px solid rgba(120,180,220,.15);color:#8ab8d8}
+.th-glitch .pill{background:rgba(0,255,100,.06);border:1px solid rgba(0,255,120,.15);color:#60d898;font-family:"Courier New",monospace;border-radius:2px;font-size:10px;letter-spacing:2px}
+.th-fire .pill{background:rgba(255,80,20,.06);border:1px solid rgba(255,100,30,.18);color:#c89070}
+.msg-area{min-height:55px;display:flex;align-items:center;justify-content:center;margin:6px 0 10px}
+.msg-text{font-size:13px;line-height:1.7;animation:fadeSlideIn .45s cubic-bezier(.34,1.56,.64,1)}
+@keyframes fadeSlideIn{0%{transform:translateY(10px);opacity:0}100%{transform:translateY(0);opacity:1}}
+.th-dark .msg-text{color:rgba(255,255,255,.85);font-style:italic}
+.th-rose .msg-text{color:#6d4c4c}
+.th-rain .msg-text{color:#b8d6f0;text-shadow:0 1px 4px rgba(100,170,220,.15)}
+.th-glitch .msg-text{color:#c0f0d8;text-shadow:0 0 8px rgba(0,255,120,.15)}
+.th-fire .msg-text{color:#e8c8a8;text-shadow:0 1px 6px rgba(200,80,20,.15)}
+.btn{position:relative;width:100%;padding:14px;border:none;border-radius:50px;font-size:14px;font-weight:700;letter-spacing:1px;cursor:pointer;transition:all .25s ease;outline:none;-webkit-tap-highlight-color:transparent;overflow:hidden}
+.btn:active{transform:scale(.94)}
+.th-dark .btn{background:linear-gradient(135deg,#ff4770,#d6336c,#b0255a);color:#fff;box-shadow:0 6px 24px rgba(255,60,100,.35)}
+.th-rose .btn{background:linear-gradient(135deg,#d4848b,#c9606b,#ab4a5a);color:#fff;box-shadow:0 4px 20px rgba(190,80,90,.3)}
+.th-rain .btn{background:linear-gradient(135deg,rgba(30,100,160,.5),rgba(20,70,130,.6),rgba(15,50,110,.55));color:#d0e8ff;border:1px solid rgba(100,180,230,.3);box-shadow:0 0 20px rgba(60,140,220,.2),0 4px 16px rgba(0,0,0,.3)}
+.th-glitch .btn{background:linear-gradient(180deg,rgba(0,80,40,.4),rgba(0,50,20,.5));color:#a0f0c8;border:1px solid rgba(0,255,120,.35);border-radius:4px;font-family:"Courier New",monospace;letter-spacing:3px;box-shadow:0 0 16px rgba(0,255,100,.15),inset 0 1px 0 rgba(0,255,100,.06);text-shadow:0 0 8px rgba(0,255,120,.4)}
+.th-fire .btn{background:linear-gradient(180deg,rgba(200,50,10,.5),rgba(150,30,5,.55),rgba(100,20,3,.5));color:#f5c898;border:1px solid rgba(255,100,30,.35);box-shadow:0 4px 20px rgba(255,60,10,.25),0 0 40px rgba(255,80,20,.06)}
+.dots-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:5px;margin-top:14px;padding:0 4px}
+.dot{width:7px;height:7px;border-radius:50%;transition:all .25s cubic-bezier(.34,1.56,.64,1)}
+.th-dark .dot{background:rgba(255,255,255,.12)}.th-rose .dot{background:#f0c8cc;width:10px;height:10px;border-radius:50% 50% 50% 50%/40% 40% 60% 60%}.th-rain .dot{background:rgba(140,200,240,.2);border-radius:50% 50% 50% 50%/30% 30% 70% 70%}
+.th-glitch .dot{background:rgba(0,255,100,.15);clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)}
+.th-fire .dot{background:rgba(255,100,30,.15);box-shadow:0 0 3px rgba(255,60,10,.1)}
+.dot.ok{background:#ff3b5c;box-shadow:0 0 8px rgba(255,59,92,.7);animation:crackPop .35s cubic-bezier(.34,1.56,.64,1)}
+@keyframes crackPop{0%{transform:scale(1.6)}50%{transform:scale(.6)}100%{transform:scale(1)}}
+.th-rose .dot.ok{background:#c62828;border-radius:50%;transform:rotate(45deg) scale(.7);animation:heartBreak .4s cubic-bezier(.34,1.56,.64,1)}
+@keyframes heartBreak{0%{transform:scale(1.3) rotate(0)}50%{transform:scale(.5) rotate(45deg)}100%{transform:scale(.7) rotate(45deg)}}
+.th-rain .dot.ok{background:#4fc3f7;border-radius:50%;box-shadow:0 0 8px rgba(79,195,247,.6),0 0 16px rgba(79,195,247,.2);animation:dropletPop .4s cubic-bezier(.34,1.56,.64,1)}
+@keyframes dropletPop{0%{transform:scale(1.5)}50%{transform:scale(.6)}100%{transform:scale(1)}}
+.th-glitch .dot.ok{background:#ff3050;clip-path:polygon(20% 0%,80% 0%,100% 20%,100% 80%,80% 100%,20% 100%,0% 80%,0% 20%);box-shadow:0 0 8px rgba(255,50,80,.7),0 0 16px rgba(255,0,0,.3);animation:hexShatter .4s cubic-bezier(.34,1.56,.64,1)}
+@keyframes hexShatter{0%{transform:scale(1.6) rotate(30deg)}50%{transform:scale(.5) rotate(0)}100%{transform:scale(1) rotate(0)}}
+.th-fire .dot.ok{background:#ff4410;box-shadow:0 0 10px rgba(255,68,16,.7),0 0 20px rgba(255,80,20,.3);animation:coalPop .4s cubic-bezier(.34,1.56,.64,1)}
+@keyframes coalPop{0%{transform:scale(1.8);background:#ffaa00}50%{transform:scale(.5);background:#cc2200}100%{transform:scale(1);background:#ff4410}}
+.fx{position:fixed;font-size:18px;pointer-events:none;z-index:5;animation:fxFall 1.2s ease-in forwards;opacity:0}
+@keyframes fxFall{0%{transform:translateY(0) scale(0);opacity:0}12%{transform:translateY(4px) scale(1.3);opacity:1}100%{transform:translateY(120px) scale(.3) rotate(var(--rot));opacity:0}}
+.fin-overlay{position:fixed;top:0;left:0;width:100%;height:100%;z-index:20;display:flex;justify-content:center;align-items:center;animation:fadeIn .6s ease}
+@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+.fin-msg{text-align:center;padding:30px;animation:popIn .6s cubic-bezier(.34,1.56,.64,1)}
+@keyframes popIn{0%{transform:scale(.5);opacity:0}100%{transform:scale(1);opacity:1}}
+.fin-emoji{font-size:80px;display:block;margin-bottom:16px}
+.fin-title{font-size:22px;font-weight:800;margin-bottom:10px}
+.fin-sub{font-size:14px;opacity:.75;line-height:1.8;margin-bottom:20px}
+.fin-btn{padding:12px 40px;border-radius:30px;background:transparent;font-size:15px;cursor:pointer;letter-spacing:2px;transition:all .3s ease}
+.th-dark .fin-overlay{background:rgba(0,0,0,.85)}.th-dark .fin-msg{color:#fff}.th-dark .fin-btn{border:2px solid rgba(255,255,255,.4);color:#fff}
+.th-rose .fin-overlay{background:rgba(60,10,15,.9)}.th-rose .fin-msg{color:#fff}.th-rose .fin-btn{border:2px solid rgba(255,255,255,.5);color:#fff}
+.th-rain .fin-overlay{background:rgba(8,20,40,.92)}.th-rain .fin-msg{color:#d0e4f5}.th-rain .fin-btn{border:2px solid rgba(140,200,240,.4);color:#c8e0f8}
+.th-glitch .fin-overlay{background:rgba(2,6,8,.93)}.th-glitch .fin-msg{color:#b8f0d0}.th-glitch .fin-btn{border:1px solid rgba(0,255,120,.4);color:#a0f0c8;border-radius:4px;font-family:"Courier New",monospace}
+.th-fire .fin-overlay{background:rgba(15,2,0,.93)}.th-fire .fin-msg{color:#f5d0b0}.th-fire .fin-btn{border:1px solid rgba(255,100,30,.5);color:#f5c898}
+.wiggle{animation:wiggle .35s ease}@keyframes wiggle{0%,100%{transform:translateX(0);opacity:1}20%{transform:translateX(4px) scale(1.02);opacity:.85}50%{transform:translateX(-3px) scale(.98);opacity:1}75%{transform:translateX(2px);opacity:.92}}
+.glitch-t{animation:glitchT .3s ease}@keyframes glitchT{0%,100%{transform:translateX(0);opacity:1}20%{transform:translateX(4px);opacity:.8}40%{transform:translateX(-4px);opacity:1}60%{transform:translateX(2px);opacity:.9}80%{transform:translateX(-2px);opacity:1}}
+.th-glitch .scanlines{position:fixed;top:0;left:0;width:100%;height:100%;z-index:50;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.08) 2px,rgba(0,0,0,.08) 4px)}
+.rain-line{position:absolute;width:2px;background:linear-gradient(transparent,rgba(160,200,240,.35));animation:rainF linear infinite}
+@keyframes rainF{0%{transform:translateY(-60px);opacity:0}5%{opacity:1}80%{opacity:.6}100%{transform:translateY(105vh);opacity:0}}
+.ember-p{position:absolute;border-radius:50%;animation:embRise linear infinite;opacity:0}
+@keyframes embRise{0%{transform:translateY(105vh) translateX(0) scale(0);opacity:0}8%{opacity:var(--op)}70%{opacity:var(--op)}100%{transform:translateY(-10vh) translateX(var(--drift)) scale(.4);opacity:0}}
+.petal-p{position:absolute;animation:petFall linear infinite;opacity:0}
+@keyframes petFall{0%{transform:translateY(-5vh) translateX(0) rotate(0) scale(.8);opacity:0}8%{opacity:var(--op)}85%{opacity:var(--op)}100%{transform:translateY(105vh) translateX(var(--drift)) rotate(var(--rot)) scale(.3);opacity:0}}
+.part-p{position:absolute;border-radius:50%;animation:partRise linear infinite;opacity:0}
+@keyframes partRise{0%{transform:translateY(105vh) scale(0) rotate(0);opacity:0}10%{opacity:var(--op)}80%{opacity:var(--op)}100%{transform:translateY(-10vh) scale(1.2) rotate(var(--rot));opacity:0}}
+</style></head><body>
+<div class="bg"></div><div class="parts" id="parts"></div>
+<div class="card-w"><div class="card" id="card"><span class="icon" id="icon">馃挃</span><div class="nametag" id="nametag"></div><div class="pill" id="pill"></div><div class="msg-area"><span class="msg-text" id="msg"></span></div><button class="btn" id="btn" onclick="clickIt()"></button><div class="dots-grid" id="dots"></div></div></div>
+<script>
+// ====== ALL DATA ======
+var P = {
+xbt:{name:"璋㈡尝娑?,theme:"th-dark",icon:"馃挃",startMsg:"浠婂ぉ 520锛岀偣涓€涓嬭瘯璇曪紵馃槒",pillPre:"绗?",pillMid:" / 30 娆?路 闃茬嚎瀹屾暣 ",pillSuf:"%",btnStart:"馃挧 鎾曠鐖辨儏鐨勮皫瑷€",finTitle:"璋㈡尝娑涳紝浣犺耽浜?,finSub1:"鑺变簡 30 娆＄偣鍑昏瘉鏄庝簡涓€浠朵簨鈥斺€?,finSub2:"浣犱笉鐩镐俊鐖辨儏鐨勬€佸害锛岄潪甯稿潥瀹氥€?,finSub3:"绁濅綘鎼為挶蹇箰 馃挵馃挵馃挵",finBtn:"馃毆 绂诲紑杩欎釜浼ゅ績鍦?,exitMsg:"馃弮鈥嶁檪锔?鏄庡勾 520<br>甯屾湜涓嶈鍐嶈浜嗏€?,lastBtn:"馃彸锔?蹇冩湇鍙ｆ湇锛岀偣鍑婚€€鍑?,lastPill:"闃茬嚎宸插交搴曞穿婧?馃拃",total:30,
+finEmoji:"馃懝",lastIcon:"馃懝",exitBg:"#0d0015",exitColor:"rgba(255,255,255,.5)",
+icons:["馃挃","馃挃","馃挃","馃挃","馃挃","馃挊","馃挊","馃挊","馃挊","馃挊","馃挆","馃挆","馃挆","馃挆","馃挆","馃枻","馃枻","馃枻","馃枻","馃枻","馃槩","馃槩","馃槩","馃槹","馃槹","馃樀","馃樀","馃樀","馃く","馃く"],
+btns:["馃挧 鎾曠鐖辨儏鐨勮皫瑷€","馃挧 鎴戜笉淇?,"馃挧 缁х画鎾?,"馃挧 鐖辨儏涓嶅瓨鍦?,"馃挧 鍏ㄦ槸澶чゼ","馃挧 鍐嶆潵","馃挧 鎼為挶涓嶅ソ鍚?,"馃挧 鍗曡韩涓囧瞾","馃挧 涓嶄俊灏辨槸涓嶄俊","馃挧 缁х画鍟?,"馃挧 鐖辨儏鏄亣鐨?,"馃挧 閱掗啋","馃挧 鍒專鎵庝簡","馃挧 蹇簡锛熸兂澶","馃挧 杩樺墿涓€鍗?,"馃挧 鍐嶆帴鍐嶅帀","馃挧 鍗曡韩璐垫棌","馃挧 涓嶄俊閭?,"馃挧 鎼為挶瑕佺揣","馃挧 鐖辨儏閫€鏁?,"馃挧 淇′綘鎵嶆€?,"馃挧 姝诲績鍚?,"馃挧 涓嶈鍋?,"馃挧 蹇埌浜嗭紵","馃挧 灏辫繖灏辫繖","馃挧 涓変簩涓€","馃挧 蹇簡蹇簡","馃挧 鏈€鍚庝袱涓?,"馃挧 鏈€鍚庝竴涓嬶紒","馃挧 缁堜簬..."],
+sparks:["馃槩","馃挧","馃","馃槶","馃挃","馃ズ","馃樋","馃導锔?],
+msgs:["璋㈡尝娑?520 瀛よ韩涓€浜猴紝鍒汉鎾掔硸浣犵嫭瀹堢┖鎴垮お鍙€滃暒","鐬х灖璋㈡尝娑涳紝520 鍒汉绾︿細鐢滆湝锛屼綘鍙兘鐙嚜鍒锋墜鏈哄挴","520 娴极婊¤锛岃阿娉㈡稕鍗存病濂虫湅鍙嬶紝灞炲疄鏄崟韬ぉ鑺辨澘","璋㈡尝娑涗粖鏃?520 鏆村嚮鏉ヨ锛屽埆浜烘垚鍙屾垚瀵逛綘褰㈠崟褰卞彧","鍒汉 520 鏀惰姳鐗垫墜锛岃阿娉㈡稕鍙兘缇℃厱鍒汉鐢滆湝鐨勭埍鎯?,"鎭枩璋㈡尝娑涘枩鎻?520 鍗曡韩浣撻獙鍗★紝浠婂勾渚濇棫鏃犱汉鍋忕埍","520 鐖辨剰婊″ぉ椋烇紝鍞嫭缁曞紑璋㈡尝娑涳紝濂冲弸褰卞瓙閮芥病鏈?,"璋㈡尝娑?520 鐙嚜杩囪妭锛屽埆浜虹鎭╃埍浣犻粯榛樺悆鐙楃伯鍛€","娴极 520 鍒汉鐢滆湝绾︿細锛岃阿娉㈡稕杩樺湪鑻﹁嫤绛夊緟缂樺垎闄嶄复","璋㈡尝娑?520 鎯ㄩ伃钀藉崟锛屾湅鍙嬪湀绉€鎭╃埍澶у啗娌′綘鐨勮韩褰?,"520 鍒汉鍙屽悜濂旇荡锛岃阿娉㈡稕鍗曞悜鍗曡韩锛屼富鎵撲竴涓鐙?,"璋㈡尝娑涗粖鏃?520emo 鏃跺埢锛屾病濂冲弸鍙兘鑷垜瀹夋叞搴︽棩","520 婊¤鎯呬荆鎾掔硸锛岃阿娉㈡稕瀛よ韩寰樺緤锛屽睘瀹炴湁鐐瑰績閰?,"鍒汉 520 鎷ユ姳鐖变汉锛岃阿娉㈡稕鎷ユ姳绌烘皵锛屽崟韬疄閿や簡","璋㈡尝娑?520 渚濇棫瀛ゅ锛岀埍鎯呰繖鐝溅浠婂勾杩樻槸娌¤刀涓?,"520 鐖辨剰鍖呭洿涓栫晫锛岃阿娉㈡稕琚埍鎯呴仐蹇樼嫭鑷繃鑺傛棩","璋㈡尝娑涚尽鎱曞摥锛?20 鍒汉鐢滆湝锛屼綘杩炰釜鑱婂ぉ瀵硅薄閮芥病","娴极鑺傛棩 520锛岃阿娉㈡稕鏃犱匠浜虹浉浼达紝涓€浜哄害杩囪繖涓€澶?,"520 鎯呬荆閬嶅湴璧帮紝璋㈡尝娑涘崟韬嫭鐣欙紝浣曟椂鎵嶈兘鑴卞崟鍛€","璋㈡尝娑?520 澶у瀷瀛ゅ鐜板満锛屽埆浜烘亱鐖变綘鐙嚜娓呴啋搴︽棩","520 椴滆姳绀肩墿婊″ぉ椋烇紝璋㈡尝娑涗袱鎵嬬┖绌烘病濂冲弸澶墡蹇?,"鍒汉 520 鍏变韩娴极锛岃阿娉㈡稕鐙韩瀛ょ嫭锛屽崟韬?buff 鎷夋弧","璋㈡尝娑?520 鏃犵紭鐖辨儏鐩涘锛屽彧鑳芥梺瑙傚埆浜虹殑鐢滆湝鏃ュ父","520 鐢滆湝姘涘洿鎷夋弧锛岃阿娉㈡稕瀛よ韩涓€浜猴紝鑴卞崟閬ラ仴鏃犳湡","璋㈡尝娑涗粖鏃?520 鏆村嚮锛屽埆浜虹壍鎵嬮€涜浣犲畢瀹舵棤浜洪櫔浼?,"鐖辨儏閬垮紑璋㈡尝娑涳紝520 鍒汉鎭╃埍浣犲鍗曪紝澶湡瀹炰簡鍚?,"520 鍒汉鍙屽悜鍛婄櫧锛岃阿娉㈡稕鏃犱汉鍊惧績锛屽崟韬お闅惧暒","璋㈡尝娑?520 瑙ｉ攣瀛ゅ鎴愬氨锛屼粖骞翠緷鏃ф病鏀惰幏鐢滅敎鐨勭埍","婊¤鐖辨剰鐨?520锛岃阿娉㈡稕瀛よ韩涓€浜猴紝榛橀粯缇℃厱鎯呬荆浠?,"璋㈡尝娑?520 鏀跺畼瀛ゅ锛屾槑骞村啀涓嶆壘濂冲弸鍙琚瑧涓€骞?]
+},
+xbl:{name:"寰愰偊鏉?,theme:"th-rain",icon:"馃導锔?,startMsg:"涓嬮洦鐨?520锛岀嫭鑷竴浜虹湅绐楀鈥︹€︷煂э笍",pillPre:"绗?",pillMid:" / 50 娆?路 蹇冨瀹屾暣搴?",pillSuf:"%",btnStart:"馃導锔?闆ㄤ竴鐩翠笅",finTitle:"寰愰偊鏉ワ紝浣犳拺鍒颁簡鏈€鍚?,finSub1:"娣嬩簡 50 鍦洪洦锛岀粓浜庢槑鐧解€斺€?,finSub2:"鐖辨儏灏卞儚杩欏満鏆撮洦锛屼粠鏉ュ氨娌″仠杩囷紝浣嗕綘涓€鐩存病甯︿紴銆?,finSub3:"绠椾簡锛屾悶閽变拱浼炲惂 馃挵馃挵馃挵",finBtn:"馃毆 闆ㄥ仠浜嗭紝璧板惂",exitMsg:"馃弮鈥嶁檪锔?鏄庡勾 520<br>璁板緱甯︿紴鈥?,lastBtn:"馃彸锔?闆ㄥ仠浜嗭紝鐐瑰嚮绂诲紑",lastPill:"蹇冨褰诲簳鐡﹁В 馃拃",total:50,
+finEmoji:"馃拃",lastIcon:"馃拃",exitBg:"#0a1628",exitColor:"rgba(160,200,220,.5)",
+icons:["馃導锔?,"馃導锔?,"馃導锔?,"馃導锔?,"馃導锔?,"馃導锔?,"馃導锔?,"馃導锔?,"馃導锔?,"馃導锔?,"鉀堬笍","鉀堬笍","鉀堬笍","鉀堬笍","鉀堬笍","鉀堬笍","鉀堬笍","鉀堬笍","鉀堬笍","鉀堬笍","馃尒锔?,"馃尒锔?,"馃尒锔?,"馃尒锔?,"馃尒锔?,"馃尒锔?,"馃尒锔?,"馃尒锔?,"馃尒锔?,"馃尒锔?,"馃挧","馃挧","馃挧","馃挧","馃挧","馃挧","馃挧","馃挧","馃挧","馃挧","馃槩","馃槩","馃槩","馃槩","馃槩","馃樀","馃樀","馃く","馃く","馃く"],
+btns:["馃導锔?闆ㄤ竴鐩翠笅","馃導锔?姘旀皼涓嶇畻铻嶆唇","馃導锔?鍦ㄥ悓涓眿妾愪笅","馃導锔?浣犳劅鍒板績鍦ㄥ彉鍖?,"馃導锔?涓嶅彲鎬濊鍚?,"馃導锔?姊﹀湪鐬棿宕╁","馃導锔?涓轰綍褰撳垵閭ｄ箞鍌?,"馃導锔?杩樹竴蹇冩兂瑕佸珌缁欎粬","馃導锔?灏辨槸鐖卞埌娣卞鎵嶆€ㄤ粬","馃導锔?鑸嶄笉鑸嶅緱閮芥柇浜嗗惂","馃導锔?閭ｆ槸浠庢潵閮芥病鏈夊悗璺殑鎮礀","馃導锔?灏辨槸鐖卞埌娣卞鎵嶇敱浠?,"馃導锔?纰庝簡蹇冧篃瑕佹斁寰椾笅","馃導锔?闅鹃亾蹇樹簡鐖变粬鐨勪激鐤?,"馃導锔?涓嶈鍐嶄负浜嗕粬鎸ｆ墡","馃導锔?涓嶈鍐嶄负浠栧乏鐗靛彸鎸?,"馃導锔?浠婂悗涓嶇浠栫埍涓嶇埍璋?,"馃導锔?蹇箰鍚?閮介殢浠?,"馃導锔?闆ㄤ竴鐩翠笅","馃導锔?姘旀皼涓嶇畻铻嶆唇","馃導锔?鍦ㄥ悓涓眿妾愪笅","馃導锔?浣犳劅鍒板績鍦ㄥ彉鍖?,"馃導锔?蹇冨湪鍙樺寲","馃導锔?闆ㄨ繕鍦ㄤ笅","馃導锔?杩囧崐浜?,"馃導锔?缁х画娣嬮洦","馃導锔?涓嶈鍋?,"馃導锔?鍗曡韩蹇箰","馃導锔?鐖辨儏鏄亣鐨?,"馃導锔?鎼為挶涓嶉鍚?,"馃導锔?鐪佷簡绀肩墿閽?,"馃導锔?鑷敱涓囧瞾","馃導锔?杩樻湁鍗佸嚑涓?,"馃導锔?缁х画缁х画","馃導锔?蹇簡蹇簡","馃導锔?鍊掓暟鍗佷釜","馃導锔?涔濅釜","馃導锔?鍏釜","馃導锔?涓冧釜","馃導锔?鍏釜","馃導锔?浜斾釜","馃導锔?鍥涗釜","馃導锔?涓変釜","馃導锔?涓や釜","馃導锔?鏈€鍚庝竴涓紒"],
+sparks:["馃挧","馃挦","馃寠","馃槩","馃ズ","鉂勶笍","馃尗锔?,"馃"],
+msgs:["寰愰偊鏉?520 瀹夐潤杩囪妭锛屾梺浜虹敎铚滐紝浣犻粯榛樺綋鍗曡韩鏃佽鑰?,"鐖辨剰閾烘弧澶ц灏忓贩锛屽緪閭︽潵渚濇棫鍗曡韩锛岀紭鍒嗚繜杩熸湭闄嶄复","鍒汉鐗垫墜绾︿細鎾掔硸锛屽緪閭︽潵鐙嚜鐜╂墜鏈猴紝鐙韩涓€浜烘竻闂?,"娴极 520 濡傜害鑰岃嚦锛屽緪閭︽潵鏃犱匠浜虹浉浼达紝鐖辨儏鐝溅鏅氱偣","寰愰偊鏉ュ枩鎻?520 瀛ゅ浣撻獙鍗★紝绉€鎭╃埍鍚嶅崟閲屾煡鏃犳浜?,"婊¤鎯呬荆鍙屽悜濂旇荡锛屽緪閭︽潵瀛よ韩寰樺緤锛岃繛鏆ф槯瀵硅薄閮芥棤","鍒汉鏀惰姳鏀剁ぜ蹇冨姩锛屽緪閭︽潵涓ゆ墜绌虹┖锛岀埍鎯呭奖瀛愰兘涓嶈","520 鐢滆湝姘涘洿鎷夋弧锛屽緪閭︽潵涓€浜哄害鏃ワ紝榛橀粯鍚冩弧鐙楃伯","寰愰偊鏉ヨ交搴﹀皬 emo锛屽埆浜虹儹鎭嬬敎铚滐紝浣犵嫭浜喎娓呬笌瀛ゅ崟","涓栭棿鐖辨剰鍥涘娴佹穼锛屽敮鐙粫寮€寰愰偊鏉ワ紝鑺傛棩涓庝綘鏃犲叧鑱?,"寰愰偊鏉ュ湪绾垮洿瑙傛亱鐖憋紝鍒汉骞哥婊℃弧锛岃嚜宸卞彧鑳藉共缇℃厱","520 鍛婄櫧鐑疆鍥涜捣锛屽緪閭︽潵鏃犱汉鍊惧績锛岃劚鍗曡鍒掑啀钀界┖","韬竟濂藉弸闄嗙画鑴卞崟锛屽緪閭︽潵鍘熷湴韪忔锛?20 渚濇棫瀛よ韩","椴滆姳鎯呰瘽婕ぉ椋炶垶锛屽緪閭︽潵鏃犱汉鎯﹁锛屽彧鍓╁鍗曢櫔鑷繁","鍒汉瑙勫垝鎭嬬埍鏈潵锛屽緪閭︽潵杩樺湪鍙戞剚浣曟椂鑳介亣瑙佸コ鍙?,"寰愰偊鏉ュ畢瀹剁啲杩?520锛屽闈㈢敎铚滅媯娆紝浣犵嫭瀹堢┖鎴垮彂鍛?,"娴极浠庝笉鍋忕埍寰愰偊鏉ワ紝520 杩欏ぉ渚濇棫鎰熷彈涓嶅埌鍗婂垎娓╂煍","鐪嬬潃鎯呬荆鎴愬弻鎴愬锛屽緪閭︽潵鐪肩孩涓嶅凡锛岃繛鑱婂ぉ鎼瓙閮界己","鐖辨剰鍖呭洿鏁翠釜涓栫晫锛屽緪閭︽潵琚埍鎯呴仐蹇橈紝鐙嚜鐔繃浠婂ぉ","寰愰偊鏉ュ垵娆＄牬闃诧紝鍒汉鎷ユ姳鐖变汉锛屼綘鍙兘鏃犲鎷ユ姳绌烘皵","鍚岄緞浜虹悍绾锋亱鐖辩儹鎭嬶紝寰愰偊鏉ヨ窡涓嶄笂鑺傚锛屼緷鏃у闆堕浂","琛楀ご澶勫閮芥槸鐢滆湝锛屽緪閭︽潵鏍兼牸涓嶅叆锛屽鐙劅鎵戦潰鑰屾潵","寰愰偊鏉ュ紑濮嬬劍铏戜笉瀹夛紝鍒汉璋堟儏璇寸埍锛屼綘杩炴満浼氶兘娌℃湁","520 鍒汉濂旇荡灞辨捣鐩哥埍锛屽緪閭︽潵鍥板湪鍗曡韩锛屼笉鐭ヤ綍鏃惰劚鍗?,"寰愰偊鏉ョ埍鎯呰繍鍔夸綆杩凤紝骞村勾瀛ゅ锛屼粖骞翠緷鏃ф鏃犺捣鑹?,"鍒汉鍏变韩浜洪棿鐑熺伀锛屽緪閭︽潵鐙韩鍐锋竻锛岃秺鐪嬭秺璁╀汉蹇冪柤","寰愰偊鏉ヤ腑搴︾牬闃诧紝鐪嬬潃鏃佷汉鐢滆湝锛屽唴蹇冩弧鏄尽鎱曚笌涓嶇敇","520 绀肩墿鍛婄櫧閬嶅湴閮芥槸锛屽緪閭︽潵鏃犱汉鍦ㄦ剰锛屽崐鍙ユ儏璇濇病鏈?,"涓诲姩琚姩鍏ㄩ兘涓嶈锛屽緪閭︽潵鐖辨儏缁濈紭锛?20 渚濇棫瀛よ韩涓€浜?,"鏈嬪弸闄嗙画璋堝璁哄珌锛屽緪閭︽潵杩炲垵鎭嬮兘娌★紝宸窛瓒婃媺瓒婂ぇ","寰愰偊鏉ユ繁搴?emo 涓婄嚎锛屽埆浜烘棩甯哥敎铚滐紝浣犲彧鍓╂棤灏藉鐙?,"鍏ㄧ綉閮藉湪绉€鎭╃埍锛屽緪閭︽潵榛劧绁炰激锛岃劚鍗曞笇鏈涜秺鏉ヨ秺灏?,"鏄庢槑鏉′欢骞朵笉宸紝濂堜綍 520 渚濇棫鍗曡韩锛屽緪閭︽潵灞炲疄绂昏氨","鍒汉琚粏蹇冨疇鐖卞懙鎶わ紝寰愰偊鏉ユ棤浜哄亸鐖憋紝瀛ょ嫭宸叉垚甯告€?,"寰愰偊鏉ユ參鎱㈣娓呯幇瀹烇紝鐖辨儏鎴栬鏈氨鍜岃嚜宸辨病浠€涔堢紭鍒?,"520 鐢滆湝鐤媯鏆村嚮锛屽緪閭︽潵鏃犱汉鐩镐即锛屽彧鑳借嚜鎴戝畨鎱板害鏃?,"涓€娆℃閿欒繃缂樺垎锛屽緪閭︽潵 520 鍐嶆钀藉崟锛屾敞瀹氬瀵″張涓€骞?,"鍛ㄥ洿鍏ㄦ槸鎭嬬埍姘旀伅锛屽緪閭︽潵缃韩浜嬪锛屾樉寰楁牸澶栧績閰歌惤瀵?,"寰愰偊鏉ラ噸搴︾牬闃叉椂鍒伙紝鍒汉鍙屽悜濂旇荡锛屼綘姘歌繙瀛よ韩鐙","鍚岄緞浜洪兘鍦ㄧ粍寤哄搴紝寰愰偊鏉ヨ繕鍦ㄥ崟韬紝瀹炲湪澶墡蹇冧簡","鍔姏瀵绘壘缂樺垎鏃犳灉锛屽緪閭︽潵 520 鍗曡韩锛岀埍鎯呬粠涓嶇湻椤句綘","鐖辨剰娉涙互甯嵎鍏ㄥ煄锛屽敮鐙紡鎺夊緪閭︽潵锛岃劚鍗曞笇鏈涙负鑼簡","寰愰偊鏉ュ交搴曞績鎬佺牬闃诧紝鐪嬬潃鍒汉骞哥锛屽彧鍓╂棤濂堜笌蹇冮吀","鍒汉琚崸鍦ㄦ墜蹇冮噷鐖憋紝寰愰偊鏉ユ棤浜虹悊鐫紝瀛ょ嫭璐┛鏃ュ父","澶╃敓瀛ゅ浣撹川瀹為敜锛屽緪閭︽潵骞村勾 520 鍗曡韩锛岃劚鍗曞熀鏈棤鏈?,"鐙楃伯鍚冨埌楹绘湪涔犳儻锛屽緪閭︽潵渚濇棫鍗曡韩锛岀湅涓嶅埌涓€涓濊浆鏈?,"鐖辨儏鐩存帴閫夋嫨鎽嗙儌锛屽緪閭︽潵韬哄钩鎺ュ彈锛?20 缁х画瀛ゅ鍒板簳","鍒汉鏀惰幏鍦嗘弧骞哥锛屽緪閭︽潵娉ㄥ畾瀛ょ嫭锛屾彁鍓嶉瀹氬瀵′竴鐢?,"寰愰偊鏉ョ粓鏋佺牬闃查璀︼紝杩欒緢瀛愬ぇ姒傜巼鍙兘鐙嚜搴﹁繃鑺傛棩","鍔濆緪閭︽潵鍧︾劧鎺ュ彈鐜板疄锛?20 骞村勾瀛ゅ锛屽コ鍙嬭繖杈堝瓙闅惧"]
+},
+zhz:{name:"鏈遍缚蹇?,theme:"th-glitch",icon:"馃拃",startMsg:"> 520_SYSTEM_BOOT鈥?鐐瑰嚮娴嬭瘯浣犵殑鐖辨儏闃插尽绯荤粺 鈿?,pillPre:"[SYS] ",pillMid:"/50 路 SHIELD ",pillSuf:"%",btnStart:"猬?BREACH_DEFENSE",finTitle:"鏈遍缚蹇?// SYSTEM_BREACHED",finSub1:"50 娆℃敾鍑伙紝鐖辨儏闃插尽绯荤粺宸插交搴曠槴鐥€?,finSub2:"浜嬪疄璇佹槑鈥斺€斾綘鐨勭埍鎯呴槻鐏鏍规湰涓嶅瓨鍦ㄣ€?,finSub3:"> 寤鸿锛氳浆琛屾悶閽?馃挵馃挵馃挵",finBtn:"> EXIT_TERMINAL",exitMsg:"> connection_closed<br>> maybe_next_year鈥?,lastBtn:"[EXIT] SYSTEM_COMPROMISED",lastPill:"[SYS] SHIELD 0% 路 TOTAL BREACH",total:50,
+finEmoji:"鈽狅笍",lastIcon:"鈽狅笍",exitBg:"#03080a",exitColor:"rgba(0,255,100,.4)",
+icons:["馃拃","馃拃","馃拃","馃拃","馃拃","馃拃","馃拃","馃拃","馃拃","馃拃","馃懢","馃懢","馃懢","馃懢","馃懢","馃懢","馃懢","馃懢","馃懢","馃懢","馃","馃","馃","馃","馃","馃","馃","馃","馃","馃","馃挘","馃挘","馃挘","馃挘","馃挘","馃挘","馃挘","馃挘","馃挘","馃挘","馃挜","馃挜","馃挜","馃挜","馃挜","馃挜","馃挜","馃挜","鈽狅笍","鈽狅笍"],
+btns:["猬?BREACH","猬?EXPLOIT","猬?INJECT","猬?BYPASS","猬?CRACK","猬?CORRUPT","猬?DELETE","猬?FORMAT","猬?OVERRIDE","猬?SMASH","猬?DESTROY","猬?ANNIHILATE","猬?OBLITERATE","猬?NUKE","猬?BURN","猬?MELT","猬?CRASH","猬?PANIC","猬?KERNEL_PANIC","猬?SEGFAULT","猬?NULL_PTR","猬?STACK_OVERFLOW","猬?HEAP_CORRUPT","猬?FATAL_ERROR","猬?ABORT","猬?RETRY","猬?FAIL","猬?RETRY_AGAIN","猬?FAIL_HARDER","猬?GIVE_UP","猬?BSOD","猬?rm -rf /love","猬?DROP TABLE feelings","猬?/dev/null","猬?0xDEAD","猬?CORE_DUMP","猬?SIGKILL","猬?SIGABRT","猬?PANIC()","猬?HALT","猬?SHUTDOWN -h now","猬?EXIT(1)","猬?RETURN -1","猬?ABORT()","猬?__builtin_unreachable","猬?FINAL_BREACH","猬?LAST_STAND","猬?NO_MERCY","猬?GAME_OVER","猬?SYSTEM_HALTED"],
+sparks:["鈿?,"馃挜","馃敟","馃挗","鉂?,"鈿狅笍","馃拃","馃枼锔?],
+msgs:["鏈遍缚蹇?520 瀛よ韩杩囪妭锛屽埆浜虹鎭╃埍锛屼綘瀹夐潤褰撲釜鍗曡韩瑙備紬","520 鐖辨剰鍥涘寮ユ极锛屾湵楦垮織渚濇棫娌″璞★紝缂樺垎杩熻繜涓嶈偗鍏夐【","鐬х灖鏈遍缚蹇楋紝鍒汉鐗垫墜绾︿細锛屼綘鍙兘鐙嚜鍒锋墜鏈烘墦鍙戞椂闂?,"娴极 520 宸蹭笂绾匡紝鏈遍缚蹇楁棤浣充汉鐩镐即锛岀埍鎯呯彮杞﹁繜杩熸湭鍒?,"鏈遍缚蹇楀枩鎻?520 瀛ゅ鍗★紝鏈嬪弸鍦堢鎭╃埍鍒楄〃鏌ユ棤姝や汉","婊¤鎯呬荆鎾掔硸锛屾湵楦垮織瀛よ韩寰樺緤锛岃繛涓毀鏄у璞￠兘娌℃湁","鍒汉 520 鏀惰姳閫佺ぜ锛屾湵楦垮織涓ゆ墜绌虹┖锛岀埍鎯呭奖瀛愰兘鐪嬩笉瑙?,"520 鐢滆湝姘涘洿鎷夋弧锛屾湵楦垮織涓€浜鸿繃鑺傦紝缇℃厱鏃佷汉鍙屽悜濂旇荡","鏈遍缚蹇椾粖鏃?520 灏?emo锛屽埆浜虹儹鎭嬬敎铚滐紝浣犵嫭浜竻鍐峰鍗?,"鐖辨儏缁曞紑鏈遍缚蹇楋紝520 鐑椆鍠у殻锛屽敮鐙笌浣犳鏃犲叧鑱?,"鏈遍缚蹇?520 鍦ㄧ嚎鍚冪嫍绮紝鐪嬬潃鍒汉鐢滆湝锛岃嚜宸卞彧鑳藉共鐬溂","520 鍒汉鍛婄櫧鐗垫墜锛屾湵楦垮織鏃犱汉鍊惧績锛岃劚鍗曡鍒掑啀娆¤惤绌?,"鏈遍缚蹇?520 瀛ゅ瀹為敜锛屽悓榫勬湅鍙嬫亱鐖憋紝灏变綘渚濇棫瀛よ韩涓€浜?,"椴滆姳鐖辨剰婊″ぉ椋烇紝鏈遍缚蹇楁棤浜烘儲璁帮紝鑺傛棩鍙墿瀛ゅ崟闄即","鍒汉 520 鍙屽悜濂旇荡锛屾湵楦垮織鍗曞悜鍗曡韩锛屼富鎵撲竴涓舰鍗曞奖鍙?,"鏈遍缚蹇?520 瀹呭搴︽棩锛屽闈㈢敎铚滅媯娆紝浣犵嫭瀹堢┖鎴垮彂鍛?,"520 娴极涓庝綘鏃犲叧锛屾湵楦垮織涓嶆噦鐖辨儏锛岃嚦浠婃病琚汉鍋忕埍","鏈遍缚蹇楃湅鐫€鎯呬荆鐪肩孩锛?20 鍒汉鐢滆湝锛屼綘杩炶亰澶╂惌瀛愰兘缂?,"520 鐖辨剰鍖呭洿涓栫晫锛屾湵楦垮織琚埍鎯呴仐蹇橈紝鐙嚜鐔繃杩欏ぉ","鏈遍缚蹇?520 杞诲害鐮撮槻锛屽埆浜烘嫢鎶辩埍浜猴紝浣犲彧鑳芥嫢鎶辩┖姘?,"韬竟濂藉弸鐨嗚劚鍗曪紝鍞嫭鏈遍缚蹇楋紝520 渚濇棫鍘熷湴韪忔鍗曡韩","520 琛楀ご澶勫鐢滆湝锛屾湵楦垮織鏍兼牸涓嶅叆锛屽鐙劅鎵戦潰鑰屾潵","鏈遍缚蹇?520 寮€濮嬬劍铏戯紝鍒汉璋堟儏璇寸埍锛屼綘杩炴満浼氶兘娌℃湁","鍒汉 520 瑙勫垝鏈潵锛屾湵楦垮織杩樺湪鍙戞剚锛屼粈涔堟椂鍊欐墠鏈夊コ鍙?,"鏈遍缚蹇楃埍鎯呰繍鏋佸樊锛?20 骞村勾瀛ゅ锛屼粖骞翠緷鏃ф鏃犺繘灞?,"520 鍒汉鍏变韩鐑熺伀锛屾湵楦垮織鐙韩鍐锋竻锛岃秺鐪嬭秺鏄惧緱鍙€?,"鏈遍缚蹇?520 涓害鐮撮槻锛岀湅鐫€鎯呬荆鎴愬弻锛屽唴蹇冩弧鏄尽鎱曞珘濡?,"鍚岄緞浜洪兘鍦ㄧ儹鎭嬶紝鏈遍缚蹇?520 鍗曡韩锛屽睘瀹炴湁鐐硅窡涓嶄笂鑺傚","520 绀肩墿鎯呰瘽閬嶅湴锛屾湵楦垮織鏃犱汉鍦ㄦ剰锛岃繛涓€鍙ュ憡鐧介兘娌℃湁","鏈遍缚蹇椾富鍔ㄨ鍔ㄧ殕涓嶈锛?20 渚濇棫瀛よ韩锛岀埍鎯呭交搴曠粷缂?,"鏈遍缚蹇?520 娣卞害 emo锛屽埆浜虹敎铚滄棩甯革紝浣犲彧鍓╂棤灏藉鐙?,"520 鍏ㄧ綉閮藉湪绉€鐖憋紝鏈遍缚蹇楅化鐒剁浼わ紝鑴卞崟甯屾湜瓒婃潵瓒婂皬","鏈遍缚蹇楅鍊兼墠鍗庡湪绾匡紝濂堜綍 520 渚濇棫娌″コ鍙嬶紝灞炲疄绂昏氨","鍒汉 520 琚汉瀹犵埍锛屾湵楦垮織鏃犱汉鍋忕埍锛屽鐙凡缁忔垚涓哄父鎬?,"鏈遍缚蹇?520 璁ゆ竻鐜板疄锛岀埍鎯呭ぇ姒傜巼涓庤嚜宸卞交搴曟棤缂樺暒","520 鐢滆湝鏆村嚮鏈遍缚蹇楋紝鍒汉鐢滆湝绾︿細锛屼綘鍙兘鑷垜瀹夋叞","鏈遍缚蹇楀娆￠敊杩囩紭鍒嗭紝520 鍐嶆钀藉崟锛屾敞瀹氬瀵″張涓€骞?,"鍛ㄥ洿鍏ㄦ槸鎭嬬埍姘涘洿锛屾湵楦垮織 520 鏍兼牸涓嶅叆锛屾樉寰楁牸澶栧績閰?,"鏈遍缚蹇?520 閲嶅害鐮撮槻锛屽埆浜哄弻鍚戝璧达紝浣犳案杩滃韬竴浜?,"520 鍒汉璋堝璁哄珌锛屾湵楦垮織杩炲垵鎭嬮兘娌℃湁锛屽樊璺濊秺鎷夎秺澶?,"鏈遍缚蹇楀姫鍔涙棤鏋滐紝520 渚濇棫鍗曡韩锛岀埍鎯呯紭鍒嗘牴鏈笉鐪烽【","520 鐖辨剰娉涙互鎴愮伨锛屽敮鐙紡浜嗘湵楦垮織锛岃繖杈堝瓙闅炬湁濂冲弸浜?,"鏈遍缚蹇?520 褰诲簳鐮撮槻锛岀湅鐫€鍒汉骞哥锛屽唴蹇冨彧鍓╂棤濂堝績閰?,"鍒汉 520 琚汉鎹у湪鎵嬶紝鏈遍缚蹇楁棤浜虹悊鐫紝瀛ょ嫭璐┛鏁存棩甯?,"鏈遍缚蹇楁敞瀹氬瀵′綋璐紝520 骞村勾濡傛锛岃劚鍗曞熀鏈病甯屾湜","520 婊℃槸鐢滆湝鐙楃伯锛屾湵楦垮織鍚冨埌楹绘湪锛屼緷鏃ф病鏈変竴涓濇満浼?,"鏈遍缚蹇楃埍鎯呭交搴曟憜鐑傦紝520 韬哄钩鍗曡韩锛屽啀涔熶笉鎯冲姫鍔涗簡","520 鍒汉骞哥鍦嗘弧锛屾湵楦垮織瀛ょ嫭缁堣€侊紝鎻愬墠棰勫畾瀛ゅ浜虹敓","鏈遍缚蹇?520 缁堟瀬鐮撮槻锛岃繖杈堝瓙澶ф鐜囷紝鍙兘涓€涓汉杩囪妭鏃?,"濂夊姖鏈遍缚蹇楁帴鍙楃幇瀹烇紝520 骞村勾瀛ゅ锛屽コ鍙嬭繖杈堝瓙闅炬湁浜?]
+},
+st:{name:"灏氭稕",theme:"th-fire",icon:"馃敟",startMsg:"520 鐨勭儓鐏凡缁忕偣鐕冿紝浣犳墰寰椾綇鍚楋紵馃敟",pillPre:"绗?",pillMid:" / 50 娆?路 鑰愮伀搴?",pillSuf:"%",btnStart:"馃敟 寮曠伀鐑ц韩",finTitle:"灏氭稕锛屼綘娴寸伀閲嶇敓浜?,finSub1:"50 娆＄儓鐏剼鐑э紝缁堜簬鐏伴鐑熺伃銆?,finSub2:"鐖辨儏杩欎笢瑗匡紝姣旂伀杩樼儷鎵嬶紝浣犺繛涓€娆￠兘娌℃彙浣忋€?,finSub3:"绠椾簡锛屾悶閽遍檷娓╁惂 馃挵馃挵馃挵",finBtn:"馃毆 鐏扮儸涓鍘?,exitMsg:"馃弮鈥嶁檪锔?鏄庡勾 520<br>鍒啀鐜╃伀浜嗏€?,lastBtn:"馃彸锔?鐏伃浜嗭紝鐐瑰嚮绂诲紑",lastPill:"鑰愮伀搴?0% 路 宸茬儳鎴愮伆鐑?馃拃",total:50,
+finEmoji:"馃",lastIcon:"馃",exitBg:"#1a0000",exitColor:"rgba(255,120,50,.4)",
+icons:["馃敟","馃敟","馃敟","馃敟","馃敟","馃敟","馃敟","馃敟","馃敟","馃敟","馃挜","馃挜","馃挜","馃挜","馃挜","馃挜","馃挜","馃挜","馃挜","馃挜","馃挗","馃挗","馃挗","馃挗","馃挗","馃挗","馃挗","馃挗","馃挗","馃挗","馃枻","馃枻","馃枻","馃枻","馃枻","馃枻","馃枻","馃枻","馃枻","馃枻","馃樀","馃樀","馃樀","馃樀","馃樀","馃樀","馃樀","馃く","鈽狅笍","鈽狅笍"],
+btns:["馃敟 寮曠伀鐑ц韩","馃敟 鐑堢伀鐒氬績","馃敟 椋炶浘鎵戠伀","馃敟 姘存繁鐏儹","馃敟 鐏儳鐪夋瘺","馃敟 璧存堡韫堢伀","馃敟 鐏腑鍙栨牀","馃敟 鐜╃伀鑷剼","馃敟 鏄熺伀鐕庡師","馃敟 鐑界伀杩炲ぉ","馃敟 鐐夌伀绾潚","馃敟 鐏笂娴囨补","馃敟 鍒€灞辩伀娴?,"馃敟 鎬掔伀涓儳","馃敟 闅斿哺瑙傜伀","馃敟 鐓介鐐圭伀","馃敟 鐔婄唺鐑堢伀","馃敟 钖伀鐩镐紶","馃敟 鐑熺伀浜洪棿","馃敟 涓嶆俯涓嶇伀","馃敟 瓒佺伀鎵撳姭","馃敟 鐏儳杩炶惀","馃敟 鐑堢伀瑙佺湡閲?,"馃敟 鐏€ョ伀鐕?,"馃敟 涓€鍗婁簡","馃敟 鐏€欐濂?,"馃敟 缁х画鐑?,"馃敟 涓嶈鍋?,"馃敟 瓒婄儳瓒婃椇","馃敟 鐒氬績浼肩伀","馃敟 鐑堢伀鐒氱儳","馃敟 鐏劙婊斿ぉ","馃敟 鐑у敖鐖辨儏","馃敟 鎼為挶鐏伀","馃敟 鐪佷簡鐏伀鍣?,"馃敟 鑷敱涓嶇噧鐑?,"馃敟 娴寸伀閲嶇敓","馃敟 娑呮","馃敟 杩樻湁鍗佸嚑涓?,"馃敟 鐕冪儳娈嗗敖","馃敟 鍊掓暟鍗佷釜","馃敟 涔濅釜","馃敟 鍏釜","馃敟 涓冧釜","馃敟 鍏釜","馃敟 浜斾釜","馃敟 鍥涗釜","馃敟 涓変釜","馃敟 涓や釜","馃敟 鏈€鍚庝竴涓紒"],
+sparks:["馃敟","馃挜","馃枻","馃挩","鈿?,"馃挗","馃尓锔?,"馃"],
+msgs:["灏氭稕 520 瀹夐潤鏃佽娴极锛屽埆浜虹敎铚滅害浼氾紝浣犻粯榛樺綋涓崟韬浼?,"婊″煄鐖辨剰鍥涘娑屽姩锛屽皻娑涗緷鏃у韬紝鐖辨儏缂樺垎杩熻繜涓嶈偗闄嶄复","鏃佷汉鐗垫墜鎾掔硸绉€鎭╃埍锛屽皻娑涚嫭鑷埛鎵嬫満锛屼竴浜虹嫭浜?520 娓呴棽","娴极鑺傛棩濡傜害鑰岃嚦锛屽皻娑涙棤浣充汉鐩镐即锛岃劚鍗曚箣璺緷鏃ф极闀块仴杩?,"灏氭稕鍠滄彁 520 瀛ゅ鍗★紝鏈嬪弸鍦堢鎭╃埍鍚嶅崟閲岋紝瀹屽叏鏌ユ棤姝や汉","琛楀ご鎯呬荆鎴愬弻鎴愬锛屽皻娑涘韬緲寰婏紝杩炰釜鏆ф槯瀵硅薄閮芥壘涓嶅埌","鍒汉 520 鏀惰姳鏀舵儕鍠滐紝灏氭稕涓ゆ墜绌虹┖锛岀埍鎯呰繛褰卞瓙閮芥病鐬ц","鐢滆湝姘涘洿甯嵎鍏ㄥ煄锛屽皻娑涚嫭鑷繃鑺傦紝榛橀粯鍚冧笅鍏ㄧ綉鑺卞紡鐙楃伯","灏氭稕杩庢潵杞诲害灏?emo锛屽埆浜虹儹鎭嬬敎铚滐紝浣犵嫭浜喎娓呭鍗曟棩甯?,"涓栭棿鐖辨剰澶勫娴佹穼锛屽敮鐙粫寮€灏氭稕锛?20 娴极涓庝綘姣棤鍏崇郴","灏氭稕鍦ㄧ嚎鍥磋鍒汉鎭嬬埍锛屾弧鐪肩尽鎱曪紝鑷繁鍗村缁堝韬竴浜?,"520 鍛婄櫧鐑疆鏉ヨ锛屽皻娑涙棤浜哄€惧績锛岃劚鍗曡鍒掑啀娆″鍛婅惤绌?,"韬竟濂藉弸鎺ヨ繛鑴卞崟锛屽皻娑涘師鍦拌笍姝ワ紝骞村勾 520 渚濇棫淇濇寔鍗曡韩","椴滆姳鎯呰瘽婕ぉ椋炶垶锛屽皻娑涙棤浜烘儲璁帮紝瀛ゅ崟鎴愪簡鑺傛棩鏍囬厤","鍒汉瑙勫垝鎭嬬埍鏈潵锛屽皻娑涜繕鍦ㄥ彂鎰侊紝浠€涔堟椂鍊欐墠鑳芥嫢鏈夊コ鍙?,"灏氭稕瀹呭鐔繃 520锛屽鐣岀敎铚滅媯娆紝浣犵嫭瀹堢┖鎴挎棤鑱婂彂鍛?,"娴极浠庝笉鐪烽【灏氭稕锛?20 杩欏ぉ锛屾劅鍙椾笉鍒板崐鍒嗘俯鏌斾笌鍋忕埍","鐪嬬潃鎯呬荆浜插瘑鐩镐即锛屽皻娑涙殫鑷溂绾紝杩炰釜鑱婂ぉ鎼瓙閮芥病鏈?,"鐖辨剰鍖呭洿鏁翠釜涓栫晫锛屽皻娑涜鐖辨儏閬楀繕锛屽闆堕浂鐔繃杩欎竴鏁村ぉ","灏氭稕鍒濇蹇冩€佺牬闃诧紝鍒汉鎷ユ姳鐖变汉锛屼綘鍙兘鏃犲鎷ユ姳绌烘皵","鍚岄緞浜虹悍绾峰潬鍏ョ埍娌筹紝灏氭稕璺熶笉涓婅妭濂忥紝渚濇棫瀛よ韩婕傛硦涓嶅畾","鍏ㄥ煄閮芥槸鎭嬬埍姘旀伅锛屽皻娑涙牸鏍间笉鍏ワ紝瀛ょ嫭鎰熺灛闂存墤闈㈣€屾潵","灏氭稕寮€濮嬮櫡鍏ョ劍铏戯紝鍒汉璋堟儏璇寸埍锛屼綘杩炴亱鐖辨満浼氶兘娌℃湁","520 鍒汉濂旇荡鍙屽悜鐖辨儏锛屽皻娑涘洶鍦ㄥ崟韬紝涓嶇煡浣曟椂鎵嶈兘鑴卞崟","灏氭稕鐖辨儏杩愬娍甯稿勾浣庤糠锛屽勾骞村瀵★紝浠婂勾渚濇棫娌℃湁涓濇璧疯壊","鍒汉鍏变韩浜洪棿鐑熺伀娓╂煍锛屽皻娑涚嫭浜喎娓咃紝瓒婄湅瓒婃樉寰楀績閰稿彲鎬?,"灏氭稕涓害鐮撮槻鏉ヨ锛岀湅鐫€鏃佷汉鐢滆湝锛屽唴蹇冩弧鏄尽鎱曚笉鐢樻儏缁?,"520 绀肩墿鍛婄櫧閬嶅湴閮芥槸锛屽皻娑涙棤浜哄湪鎰忥紝鍗婂彞鏆栧績鎯呰瘽閮芥病鏈?,"涓诲姩琚姩鍏ㄩ兘娌＄敤锛屽皻娑涗笌鐖辨儏缁濈紭锛?20 渚濇棫瀛よ韩褰㈠奖鐩稿悐","鏈嬪弸闄嗙画璋堝璁哄珌锛屽皻娑涜繛鍒濇亱閮芥病鏈夛紝宸窛瓒婃媺瓒婃潵瓒婂ぇ","灏氭稕娣卞害 emo 褰诲簳涓婄嚎锛屽埆浜烘棩甯哥敎铚滐紝浣犲彧鍓╂棤灏芥极闀垮鐙?,"鍏ㄧ綉閮藉湪鑺卞紡绉€鎭╃埍锛屽皻娑涢化鐒剁浼わ紝鑴卞崟甯屾湜鍙樺緱瓒婃潵瓒婂皬","鏄庢槑鑷韩鏉′欢涓嶅樊锛屽浣?520 渚濇棫鍗曡韩锛屽皻娑涘睘瀹炶浜烘兂涓嶉€?,"鍒汉琚粏蹇冨疇鐖卞懙鎶わ紝灏氭稕鏃犱汉鍋忕埍锛屽鐙棭宸叉垚涓烘棩甯稿父鎬?,"灏氭稕鎱㈡參璁ゆ竻娈嬮叿鐜板疄锛岀埍鎯呮垨璁告湰灏卞拰鑷繁娌℃湁浠讳綍缂樺垎","520 鐢滆湝鐤媯鏆村嚮灏氭稕锛屾棤浜虹浉浼达紝鍙兘闈犺嚜鎴戝畨鎱板害杩囪妭鏃?,"涓€娆℃閿欒繃缇庡ソ缂樺垎锛屽皻娑?520 鍐嶆钀藉崟锛屾敞瀹氬瀵″張杩囦竴骞?,"鍛ㄩ伃鍏ㄦ槸鐢滆湝鎭嬬埍姘涘洿锛屽皻娑涚疆韬簨澶栵紝钀藉癁蹇冮吀鎰熸媺婊″叏鍦?,"灏氭稕杩庢潵閲嶅害鐮撮槻鏃跺埢锛屽埆浜哄弻鍚戝璧达紝浣犳案杩滃韬竴璺嫭琛?,"鍚岄緞浜洪檰缁粍寤哄搴紝灏氭稕杩樺湪鍗曡韩锛岀幇瀹炲樊璺濆疄鍦ㄥお杩囨墡蹇?,"鍔姏杩藉缂樺垎濮嬬粓鏃犳灉锛屽皻娑?520 鍗曡韩锛岀埍鎯呬粠鏉ヤ笉鎰跨湻椤句綘","鍏ㄥ煄鐖辨剰娉涙互鎴愮伨锛屽敮鐙紡鎺夊皻娑涳紝寰€鍚庤劚鍗曞笇鏈涙剤鍙戞负鑼?,"灏氭稕褰诲簳蹇冩€佸叏闈㈢牬闃诧紝鐪嬬潃鍒汉骞哥锛屽彧鍓╂弧蹇冩棤濂堜笌蹇冮吀","鍒汉琚崸鍦ㄦ墜蹇冧竾鑸柤鐖憋紝灏氭稕鏃犱汉鐞嗙潿锛屽鐙疮绌跨敓娲绘棩甯?,"瀛ゅ浣撹川褰诲簳瀹為敜璁よ瘉锛屽皻娑涘勾骞?520 鍗曡韩锛岃劚鍗曞熀鏈鏃犲笇鏈?,"鑺卞紡鐙楃伯鍚冨埌楹绘湪涔犳儻锛屽皻娑涗緷鏃у崟韬紝鐪嬩笉鍒颁竴涓濊劚鍗曡浆鏈?,"鐖辨儏鐩存帴閫夋嫨褰诲簳鎽嗙儌锛屽皻娑涜汉骞宠鍛斤紝520 瀛ゅ鍒板簳涓嶆專鎵?,"鍒汉鏀惰幏骞哥鍦嗘弧浜虹敓锛屽皻娑涙敞瀹氬鐙紝鎻愬墠棰勫畾瀛ゅ涓€杈堝瓙","灏氭稕缁堟瀬鐮撮槻棰勮涓婄嚎锛岃繖杈堝瓙澶ф鐜囷紝鍙兘鐙嚜搴﹁繃鎵€鏈夎妭鏃?,"濂夊姖灏氭稕鍧︾劧鎺ュ彈鐜板疄锛屽勾骞?520 瀛ゅ锛屽コ鍙嬭繖杈堝瓙鍩烘湰闅炬嫢鏈?]
+}
+};
+
+// ====== INIT ======
+var hash = location.hash.replace("#","") || "xbt";
+var cfg = P[hash] || P.xbt;
+document.body.className = cfg.theme;
+document.getElementById("nametag").textContent = cfg.name;
+document.getElementById("msg").textContent = cfg.startMsg;
+document.getElementById("btn").textContent = cfg.btnStart;
+document.getElementById("icon").textContent = cfg.icon;
+document.getElementById("pill").textContent = cfg.pillPre + "0" + cfg.pillMid + "100" + cfg.pillSuf;
+
+// Build dots
+var dhtml = "";
+for(var i=0;i<cfg.total;i++) dhtml += '<span class="dot"></span>';
+document.getElementById("dots").innerHTML = dhtml;
+
+// Theme-specific extras
+var partsHTML = "";
+if(cfg.theme==="th-rain"){
+  for(var i=0;i<50;i++){var l=Math.random()*100,hh=8+Math.random()*22,dur=0.5+Math.random()*1.2,del=Math.random()*6,op=0.15+Math.random()*0.35;partsHTML+='<span class="rain-line" style="left:'+l+'%;height:'+hh+'px;animation-duration:'+dur+'s;animation-delay:'+del+'s;opacity:'+op+'"></span>';}
+}else if(cfg.theme==="th-glitch"){
+  var scanlinesEl=document.createElement("div");scanlinesEl.className="scanlines";document.body.appendChild(scanlinesEl);
+  var chars="01銈偆銈︺偍銈偒銈偗銈便偝銈点偡銈广偦銈姐偪銉併儎銉嗐儓銉娿儖銉屻儘銉?;for(var i=0;i<45;i++){var ch=chars[Math.floor(Math.random()*chars.length)],cl=Math.random()*100,dur2=3+Math.random()*8,del2=Math.random()*10,op2=0.15+Math.random()*0.3,c2=Math.random()>0.5?"0,255,120":"255,0,120";partsHTML+='<span style="position:absolute;left:'+cl+'%;color:rgba('+c2+',0.25);font-size:12px;font-family:Courier New,monospace;animation:charFall linear infinite;animation-duration:'+dur2+'s;animation-delay:'+del2+'s;--op:'+op2+';opacity:0">'+ch+'</span>';}
+}else if(cfg.theme==="th-fire"){
+  var emColors=["255,100,20","255,150,30","255,60,10","255,180,40","255,80,15"];for(var i=0;i<40;i++){var ec=emColors[i%5],es=2+Math.random()*6,el=Math.random()*100,ed=5+Math.random()*12,ede=Math.random()*10,eop=0.2+Math.random()*0.4,edr=(Math.random()-0.5)*60;partsHTML+='<span class="ember-p" style="left:'+el+'%;width:'+es+'px;height:'+(es*1.5)+'px;background:rgba('+ec+',0.7);box-shadow:0 0 '+(es*3)+'px rgba('+ec+',0.5);--op:'+eop+';--drift:'+edr+'px;animation-duration:'+ed+'s;animation-delay:'+ede+'s"></span>';}
+}else if(cfg.theme==="th-rose"){
+  var petalChars=["馃尭","馃挳","馃尫","馃彽锔?,"馃尯","馃崅","鉁?,"鉂€"];for(var i=0;i<28;i++){var pc=petalChars[i%8],pl=Math.random()*100,ps=10+Math.random()*14,pd=8+Math.random()*16,pde=Math.random()*14,pop=0.2+Math.random()*0.35,pro=200+Math.random()*520,pdr=(Math.random()-0.5)*120;partsHTML+='<span class="petal-p" style="left:'+pl+'%;font-size:'+ps+'px;--op:'+pop+';--rot:'+pro+'deg;--drift:'+pdr+'px;animation-duration:'+pd+'s;animation-delay:'+pde+'s">'+pc+'</span>';}
+}else{
+  var pcolors=["255,105,180","138,43,226","255,62,94","255,182,193","218,112,214"];for(var i=0;i<30;i++){var pc2=pcolors[i%5],ps2=2+Math.random()*5,pl2=Math.random()*100,pd2=6+Math.random()*14,pde2=Math.random()*12,pop2=0.15+Math.random()*0.25,pro2=(Math.random()-0.5)*360;partsHTML+='<span class="part-p" style="left:'+pl2+'%;width:'+ps2+'px;height:'+ps2+'px;background:rgba('+pc2+',0.5);box-shadow:0 0 '+(ps2*2)+'px rgba('+pc2+',0.4);--op:'+pop2+';--rot:'+pro2+'deg;animation-duration:'+pd2+'s;animation-delay:'+pde2+'s"></span>';}
+}
+document.getElementById("parts").innerHTML = partsHTML;
+
+// ====== GAME LOGIC ======
+var count = 0, locked = false;
+
+function clickIt(){
+  if(locked) return;
+  count++;
+  var card=document.getElementById("card"),icon=document.getElementById("icon"),
+      msg=document.getElementById("msg"),btn=document.getElementById("btn"),
+      pill=document.getElementById("pill"),dots=document.querySelectorAll(".dot");
+  if(dots[count-1]) dots[count-1].classList.add("ok");
+  if(count<=cfg.total){msg.style.animation="none";msg.offsetHeight;msg.style.animation="fadeSlideIn .45s cubic-bezier(.34,1.56,.64,1)";msg.textContent=cfg.msgs[count-1];}
+  var si=Math.min(Math.floor((count-1)/cfg.total*cfg.icons.length),cfg.icons.length-1);
+  icon.textContent=cfg.icons[si];
+  card.classList.add("shake");setTimeout(function(){card.classList.remove("shake")},500);
+  pill.textContent=cfg.pillPre+count+cfg.pillMid+(100-Math.round(count/cfg.total*100))+cfg.pillSuf;
+  btn.textContent=cfg.btns[Math.min(count-1,cfg.btns.length-1)];
+  spawnFX();
+  if(count%3===0){msg.classList.add("wiggle");setTimeout(function(){msg.classList.remove("wiggle")},350);}
+  if(count>=cfg.total){
+    locked=true;icon.textContent=cfg.lastIcon;msg.textContent=cfg.msgs[cfg.total-1];
+    btn.textContent=cfg.lastBtn;pill.textContent=cfg.lastPill;
+    card.style.animation="none";card.classList.remove("shake");btn.onclick=showFinal;
+  }
+}
+
+function spawnFX(){
+  var s=cfg.sparks,el=document.createElement("span");el.className="fx";
+  el.textContent=s[Math.floor(Math.random()*s.length)];
+  el.style.left=(10+Math.random()*80)+"%";el.style.top=(15+Math.random()*55)+"%";
+  el.style.setProperty("--rot",(Math.random()-0.5)*50+"deg");document.body.appendChild(el);
+  setTimeout(function(){el.remove()},1300);
+}
+
+function showFinal(){
+  document.body.innerHTML='<div class="bg"></div><div class="parts"></div><div class="fin-overlay"><div class="fin-msg"><span class="fin-emoji">'+cfg.finEmoji+'</span><div class="fin-title">'+cfg.finTitle+'</div><div class="fin-sub">'+cfg.finSub1+'<br>'+cfg.finSub2+'<br><br><strong>'+cfg.finSub3+'</strong></div><button class="fin-btn" onclick="trulyExit()">'+cfg.finBtn+'</button></div></div>';
+}
+
+function trulyExit(){
+  document.body.style.transition="opacity .8s ease";document.body.style.opacity="0";
+  setTimeout(function(){document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:'+cfg.exitBg+';color:'+cfg.exitColor+';font-size:14px;text-align:center;padding:20px;font-family:\'PingFang SC\',\'Microsoft YaHei\',sans-serif;">'+cfg.exitMsg+'</div>';document.body.style.opacity="1"},800);
+}
+
+history.pushState(null,"",location.href);
+window.addEventListener("popstate",function(){history.pushState(null,"",location.href)});
+document.addEventListener("touchmove",function(e){if(e.target===document.body||e.target===document.documentElement){e.preventDefault()}},{passive:false});
+</script></body></html>
